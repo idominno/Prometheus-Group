@@ -1,0 +1,8 @@
+[
+    {
+        "id": 3,
+        "userId": 1,
+        "title": "Updated Post Title",
+        "body": "This is an updated post body for testing PUT operation"
+    }
+]

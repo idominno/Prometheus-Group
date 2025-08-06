@@ -1,0 +1,7 @@
+[
+    {
+        "userId": 1,
+        "title": "New Post Title",
+        "body": "This is a new post body for testing POST operation"
+    }
+]

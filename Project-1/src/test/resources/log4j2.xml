@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Log4j2 configuration for API testing framework -->
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console appender for immediate feedback during test execution -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        
+        <!-- Main log file for all API interactions -->
+        <File name="MainFile" fileName="logs/api-test.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    
+    <Loggers>
+        <!-- Framework-specific logger with INFO level for detailed API request/response logging -->
+        <Logger name="com.apitest" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainFile"/>
+        </Logger>
+        <!-- Root logger set to WARN to reduce noise from third-party libraries -->
+        <Root level="WARN">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

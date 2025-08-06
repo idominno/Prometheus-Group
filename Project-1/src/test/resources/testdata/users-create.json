@@ -1,0 +1,9 @@
+[
+    {
+        "name": "New User Name",
+        "username": "newuser",
+        "email": "newuser@example.com",
+        "phone": "555-1234",
+        "website": "newuser.com"
+    }
+]
